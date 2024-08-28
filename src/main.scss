@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}
+
+body {
+    background: #eff3f8;
+    color: #1a1a1a;
+}
+
+html.dark body {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.hero-img-dark {
+    display: none;
+}
+
+.dark {
+    .hero-img-dark {
+        display: flex;
+    }
+
+    .hero-img-light {
+        display: none;
+    }
+}
+
+.txt-gradient {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-from: #4255ff var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(66, 85, 255, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: rgb(0 163 255) var(--tw-gradient-to-position);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-style: normal;
+}
+
+.textShine {
+    background: linear-gradient(to right,
+            #2563eb 20%,
+            #00affa 30%,
+            #0190cd 70%,
+            #2563eb 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.btn-primary {
+    align-items: center;
+    border-radius: .5rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    --tw-bg-opacity: 1;
+    background-color: rgb(66 85 255 / var(--tw-bg-opacity));
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    transition-duration: .2s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+
+    &:hover {
+        background-image: linear-gradient(to top, var(--tw-gradient-stops));
+        --tw-gradient-from: #00a3ff var(--tw-gradient-from-position);
+        --tw-gradient-to: rgba(0, 163, 255, 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-to: #4255ff var(--tw-gradient-to-position);
+    }
+}
+
+.btn-primary-outline {
+    align-items: center;
+    border-radius: .5rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    position: relative;
+    --tw-text-opacity: 1;
+    transition-duration: .1s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4,0,1,1);
+    &:before {
+        background: linear-gradient(45deg, #00a3ff, #4255ff) border-box;
+        border-color: transparent;
+        border-radius: .5rem;
+        border-width: 2px;
+        content: "";
+        inset: 0;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        pointer-events: none;
+        position: absolute;
+    }
+    &:hover {
+        background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+        --tw-gradient-from: #00a3ff var(--tw-gradient-from-position);
+        --tw-gradient-to: rgba(0, 163, 255, 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-to: #4255ff var(--tw-gradient-to-position);
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+}
+.styles_rotating__kU1vI {
+    animation: styles_rotating__kU1vI 20s linear infinite;
+}
+@keyframes styles_rotating__kU1vI {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(-1turn)
+    }
+}
