@@ -47,30 +47,6 @@ html.dark body {
     font-style: normal;
 }
 
-.textShine {
-    background: linear-gradient(to right,
-            #2563eb 20%,
-            #00affa 30%,
-            #0190cd 70%,
-            #2563eb 80%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    background-size: 500% auto;
-    animation: textShine 5s ease-in-out infinite alternate;
-}
-
-@keyframes textShine {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
 .btn-primary {
     align-items: center;
     border-radius: .5rem;
