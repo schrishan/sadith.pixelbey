@@ -20,7 +20,7 @@ export const FreeConsult: React.FC = () => {
                     <div className="model-body">This is going to be a quick free call with Shakuro's own design & development producer to talk about your project and figure out if there is a match.</div>
                     <button onClick={handleCloseFreeConsultModal}  className="btn-primary gap-2 self-stretch px-5 py-2 disabled:opacity-50 min-w-[5rem] mt-5"><span>Book a call</span></button>
                 </div>
-            </div></>)};
+            </div></>)}
             <button onClick={handleOpenFreeConsultModal} className="group fixed bottom-5 right-5 z-[19] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-[1.1]" type="button">
                 <div className="relative flex min-h-[120px] min-w-[120px] items-center justify-center ">
                     <div className="h-[80px] w-[80px] overflow-hidden rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
